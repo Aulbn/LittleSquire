@@ -1,0 +1,149 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4452530258335967075
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4452530258335967084}
+  - component: {fileID: 4452530257806128540}
+  m_Layer: 0
+  m_Name: EndingCutSceneDialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4452530258335967084
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4452530258335967075}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4452530257806128540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4452530258335967075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f9aa7638b20d384192b6b5711464a00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTimed: 0
+  triggerOnce: 0
+  isEndingCutscene: 1
+  timeBetweenDialogues: 1
+  canQueue: 0
+  dialogue:
+  - speaker: {fileID: 11400000, guid: 31e1e69aef0865c41b4a8800f66def81, type: 2}
+    typeSpeed: 40
+    pauseSpeed: 0.25
+    dialogueText: Looks like we are almost there.
+  - speaker: {fileID: 11400000, guid: 7fcc0436ca54611498629b950747d8f7, type: 2}
+    typeSpeed: 40
+    pauseSpeed: 0.25
+    dialogueText: 'The castle! Father!
+
+      We are coming!'
+  - speaker: {fileID: 11400000, guid: 31e1e69aef0865c41b4a8800f66def81, type: 2}
+    typeSpeed: 40
+    pauseSpeed: 0.25
+    dialogueText: This place looks like it has seen some better days.
+  - speaker: {fileID: 11400000, guid: 7fcc0436ca54611498629b950747d8f7, type: 2}
+    typeSpeed: 40
+    pauseSpeed: 0.25
+    dialogueText: 'I was really doubting you at first,
+
+      but I''m happy to be
+      coming home again!
+
+      Thank you Miss!'
+  - speaker: {fileID: 11400000, guid: 31e1e69aef0865c41b4a8800f66def81, type: 2}
+    typeSpeed: 40
+    pauseSpeed: 0.25
+    dialogueText: You are not too bad etiher, little squire.
+  - speaker: {fileID: 11400000, guid: 7fcc0436ca54611498629b950747d8f7, type: 2}
+    typeSpeed: 40
+    pauseSpeed: 0.25
+    dialogueText: "*I can't wait to see my father again. \nI've missed him so much!"
+  - speaker: {fileID: 11400000, guid: 31e1e69aef0865c41b4a8800f66def81, type: 2}
+    typeSpeed: 40
+    pauseSpeed: 0.25
+    dialogueText: I'm sure he'll be very excited to see you too.
+  - speaker: {fileID: 11400000, guid: 4fe7cbc0fc96a4248beea9dedd591a19, type: 2}
+    typeSpeed: 40
+    pauseSpeed: 0.25
+    dialogueText: '*Greetings travelers!
+
+      Thank you for your chivalry,'
+  - speaker: {fileID: 11400000, guid: 4fe7cbc0fc96a4248beea9dedd591a19, type: 2}
+    typeSpeed: 40
+    pauseSpeed: 0.25
+    dialogueText: '*bringing back the sweet prince
+
+      back to where he belongs.'
+  - speaker: {fileID: 11400000, guid: 7fcc0436ca54611498629b950747d8f7, type: 2}
+    typeSpeed: 40
+    pauseSpeed: 0.25
+    dialogueText: '*That is not my father!'
+  - speaker: {fileID: 11400000, guid: 4fe7cbc0fc96a4248beea9dedd591a19, type: 2}
+    typeSpeed: 40
+    pauseSpeed: 0.25
+    dialogueText: '*Sigh...
+
+      Lock him up!'
+  - speaker: {fileID: 11400000, guid: 31e1e69aef0865c41b4a8800f66def81, type: 2}
+    typeSpeed: 40
+    pauseSpeed: 0.25
+    dialogueText: '*HEY!
+
+      What are you doing!?'
+  - speaker: {fileID: 11400000, guid: 4fe7cbc0fc96a4248beea9dedd591a19, type: 2}
+    typeSpeed: 40
+    pauseSpeed: 0.25
+    dialogueText: Miss* Blodspell, your reward is waiting for you.
+  - speaker: {fileID: 11400000, guid: 7fcc0436ca54611498629b950747d8f7, type: 2}
+    typeSpeed: 40
+    pauseSpeed: 0.25
+    dialogueText: Let me go!
+  - speaker: {fileID: 11400000, guid: 31e1e69aef0865c41b4a8800f66def81, type: 2}
+    typeSpeed: 40
+    pauseSpeed: 0.25
+    dialogueText: '*Where is the king of Forthwind!?'
+  - speaker: {fileID: 11400000, guid: 4fe7cbc0fc96a4248beea9dedd591a19, type: 2}
+    typeSpeed: 40
+    pauseSpeed: 0.25
+    dialogueText: '*You are looking right at him!
+
+      Are you really surprised
+      about who won the war?'
+  - speaker: {fileID: 11400000, guid: 4fe7cbc0fc96a4248beea9dedd591a19, type: 2}
+    typeSpeed: 40
+    pauseSpeed: 0.25
+    dialogueText: 'Not like it should matter to a mercenary like yourself.
+
+      Now
+      hurry up over here to claim your reward before I change my mind.'
+  - speaker: {fileID: 11400000, guid: 7fcc0436ca54611498629b950747d8f7, type: 2}
+    typeSpeed: 40
+    pauseSpeed: 0.25
+    dialogueText: '*Help me!
+
+      Miss!'
+  shouldShake: 0
+  shakeIntensity: 0.7
+  shakeTime: 0.5
