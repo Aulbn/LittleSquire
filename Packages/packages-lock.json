@@ -71,15 +71,6 @@
       },
       "url": "https://packages.unity.com"
     },
-    "com.unity.progrids": {
-      "version": "3.0.3-preview.6",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.settings-manager": "1.0.2"
-      },
-      "url": "https://packages.unity.com"
-    },
     "com.unity.render-pipelines.core": {
       "version": "11.0.0",
       "depth": 1,
@@ -146,7 +137,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.textmeshpro": {
-      "version": "3.0.4",
+      "version": "3.0.6",
       "depth": 0,
       "source": "registry",
       "dependencies": {
