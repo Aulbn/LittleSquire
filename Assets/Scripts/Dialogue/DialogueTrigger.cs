@@ -56,11 +56,11 @@ public class DialogueTrigger : MonoBehaviour
 		UIManager.DialogueManager.StartDialogue(tempDialogue, this);
 	}
 
-	public void TriggerIfCanReach(AI.AISystem Ai)
+	public void TriggerIfCanReach(/*AI.AISystem Ai*/)
 	{
-		if (Ai.CanReachDestination(transform.position))
-		{
-			TriggerDialogue();
-		}
+		//if (Ai.CanReachDestination(transform.position))
+		//{
+		//	TriggerDialogue();
+		//}
 	}
   }

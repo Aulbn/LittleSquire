@@ -37,25 +37,25 @@ public class PuzzleLeverController : MonoBehaviour, IInteract
         playLeverSound.Play();
     }
 
-    public void Interact(CharacterInteraction interactor)
+    public void Interact(/*CharacterInteraction interactor*/)
     {
-        if (interactor.canInteract)
-        {
-            //play anim
-            StartPullAnimation(PuzzleLeverAnimationHandler.Puller.Eleanor);
-            Pull();
-        }
-        else if (interactor.kidCanInteract)
-        {
-            CompanionInteract();
-        }
+        //if (interactor.canInteract)
+        //{
+        //    //play anim
+        //    StartPullAnimation(PuzzleLeverAnimationHandler.Puller.Eleanor);
+        //    Pull();
+        //}
+        //else if (interactor.kidCanInteract)
+        //{
+        //    CompanionInteract();
+        //}
     }
 
     public void CompanionInteract()
     {
         Vector3 position = transform.position + ((isPulled ? -transform.forward : transform.forward) * 0.8f);
-        AI.AISystem ai = FindObjectOfType<AI.AISystem>();
-        ai.SetFocusPoint(transform.position + transform.up);
-        ai.OnPull(position, this);
+        //AI.AISystem ai = FindObjectOfType<AI.AISystem>();
+        //ai.SetFocusPoint(transform.position + transform.up);
+        //ai.OnPull(position, this);
     }
 }

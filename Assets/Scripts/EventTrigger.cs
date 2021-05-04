@@ -34,8 +34,8 @@ public class EventTrigger : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         if (character == Character.All || 
-            (character == Character.Eleanor && other.GetComponent<Player>() != null) ||
-            (character == Character.Cedric && other.GetComponent<AI.AISystem>() != null))
+            (character == Character.Eleanor && other.GetComponent<PlayerController>() != null)) 
+            //|| (character == Character.Cedric && other.GetComponent<AI.AISystem>() != null))
         {
             enterEvents.Invoke();
             if (disableType == DisableType.OnEnter)
@@ -46,8 +46,8 @@ public class EventTrigger : MonoBehaviour
     public void OnTriggerExit(Collider other)
     {
         if (character == Character.All ||
-    (character == Character.Eleanor && other.GetComponent<Player>() != null) ||
-    (character == Character.Cedric && other.GetComponent<AI.AISystem>() != null))
+    (character == Character.Eleanor && other.GetComponent<PlayerController>() != null)) 
+    //||(character == Character.Cedric && other.GetComponent<AI.AISystem>() != null))
         {
             exitEvents.Invoke();
             if (disableType == DisableType.OnExit)

@@ -90,7 +90,7 @@ public class MainMenu : MonoBehaviour
 		playerControls.Enable();
         if (PlayerPrefs.HasKey("ToggleSprint"))
             sprintToggle.isOn = PlayerPrefs.GetInt("ToggleSprint") == 1;
-        FindObjectOfType<Player>().canPause = false;
+        //FindObjectOfType<Player>().canPause = false;
     }
 
     private void OnDisable()
@@ -102,7 +102,7 @@ public class MainMenu : MonoBehaviour
         //FindObjectOfType<Player>().EnablePauseMenu();
         if (!isQuitting)
         {
-			FindObjectOfType<Player>().canPause = true;
+			//FindObjectOfType<Player>().canPause = true;
 			UIManager.Instance.EnableHUD();
         }
 	} 

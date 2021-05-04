@@ -25,43 +25,43 @@ public class PressurePlateController : MonoBehaviour, IInteract
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent(out Player player) ||
-            other.TryGetComponent(out AI.AISystem ai) ||
-            other.TryGetComponent(out PuzzleBoxController puzzleBox))
-        {
-            collidedActors.Add(other.gameObject);
-            if (!isBeeingStodOn)
-                eventInvoker.InvokeActivateEvents();
+        //if (other.TryGetComponent(out Player player) ||
+        //    other.TryGetComponent(out AI.AISystem ai) ||
+        //    other.TryGetComponent(out PuzzleBoxController puzzleBox))
+        //{
+        //    collidedActors.Add(other.gameObject);
+        //    if (!isBeeingStodOn)
+        //        eventInvoker.InvokeActivateEvents();
 
-            isBeeingStodOn = true;
+        //    isBeeingStodOn = true;
 
-            playPlateOn.Play();
-        }
+        //    playPlateOn.Play();
+        //}
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.TryGetComponent(out Player player) ||
-            other.TryGetComponent(out AI.AISystem ai) ||
-            other.TryGetComponent(out PuzzleBoxController puzzleBox))
-        {
-            collidedActors.Remove(other.gameObject);
+        //if (other.TryGetComponent(out Player player) ||
+        //    other.TryGetComponent(out AI.AISystem ai) ||
+        //    other.TryGetComponent(out PuzzleBoxController puzzleBox))
+        //{
+        //    collidedActors.Remove(other.gameObject);
 
-            // if no actors are colliding with the triggerplate, deactivate all connected prefabs
-            if (collidedActors.Count == 0)
-            {
-                eventInvoker.InvokeDeactivateEvents();
-                isBeeingStodOn = false;
-                playPlateOff.Play();
-            }
-        }
+        //    // if no actors are colliding with the triggerplate, deactivate all connected prefabs
+        //    if (collidedActors.Count == 0)
+        //    {
+        //        eventInvoker.InvokeDeactivateEvents();
+        //        isBeeingStodOn = false;
+        //        playPlateOff.Play();
+        //    }
+        //}
     }
 
-    public void Interact(CharacterInteraction interactor)
+    public void Interact(/*CharacterInteraction interactor*/)
     {
-        if (interactor.kidCanInteract)
-        {
-            FindObjectOfType<AI.AISystem>().OnStay(transform.position);
-        }
+        //if (interactor.kidCanInteract)
+        //{
+        //    FindObjectOfType<AI.AISystem>().OnStay(transform.position);
+        //}
     }
 }

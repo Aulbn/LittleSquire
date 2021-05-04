@@ -17,7 +17,7 @@ public class PuzzleBoxController : MonoBehaviour, IInteract
     private float timer;
     private BoxCollider collider;
     [SerializeField] private LayerMask layerToIgnore;
-    private CharacterInteraction player;
+    //private CharacterInteraction player;
     //public AudioSource playBoxSound;
     [SerializeField]private bool drawGizmos = true;
     private Vector3[] pushingPositions = new Vector3[4];
@@ -70,10 +70,10 @@ public class PuzzleBoxController : MonoBehaviour, IInteract
         }
     }
 
-    public void Interact(CharacterInteraction interactor)
+    public void Interact(/*CharacterInteraction interactor*/)
     {
-        player = interactor;
-        interactor.StartGrabbingBox(this);
+        //player = interactor;
+        //interactor.StartGrabbingBox(this);
     }
 
     private bool IsColliding(Vector3 pushingDirection, float distance, bool isForward)
@@ -81,9 +81,9 @@ public class PuzzleBoxController : MonoBehaviour, IInteract
         bool playerGettingSquished = false;
         if (!isForward)
         {
-            Transform playerTransform = player.transform;
-            playerGettingSquished = Physics.Raycast(playerTransform.position, -playerTransform.forward,distance * 2f,
-                layerToIgnore);
+            //Transform playerTransform = player.transform;
+            //playerGettingSquished = Physics.Raycast(playerTransform.position, -playerTransform.forward,distance * 2f,
+            //    layerToIgnore);
         }
 
         Transform boxtransform = transform;

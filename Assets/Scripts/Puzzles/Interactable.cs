@@ -25,7 +25,7 @@ public class Interactable : MonoBehaviour, IInteract
 
 
 
-    void IInteract.Interact(CharacterInteraction interactor)
+    void IInteract.Interact(/*CharacterInteraction interactor*/)
     {
         onInteract.Invoke();
         if (disableOnInteract)

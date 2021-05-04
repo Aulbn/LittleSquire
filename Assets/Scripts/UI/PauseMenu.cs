@@ -23,7 +23,7 @@ public class PauseMenu : MonoBehaviour
 	[SerializeField] private Image[] optionsArrowImages;
 	private float newSensitivity;
 	private float volume;
-	private Player playerControls;
+	//private Player playerControls;
 	private PlayerControls playerInput;
 	Vector2 mousePosition;
 	private Image activeArrow;
@@ -34,13 +34,13 @@ public class PauseMenu : MonoBehaviour
 		Time.timeScale = 1f;
 		gameObject.SetActive(false);
 		AudioListener.pause = false;
-		playerInput = playerControls.PlayerControls;
+		//playerInput = playerControls.PlayerControls;
 		playerInput.Menu.Point.performed += ctx => mousePosition = ctx.ReadValue<Vector2>();
 	}
 
 	private void OnEnable()
 	{
-		playerControls = FindObjectOfType<Player>();
+		//playerControls = FindObjectOfType<Player>();
 		if (PlayerPrefs.HasKey("sensitivity"))
 			OnSensitivityChanged(PlayerPrefs.GetFloat("sensitivity"));
 		if (PlayerPrefs.HasKey("volume"))
@@ -48,7 +48,7 @@ public class PauseMenu : MonoBehaviour
         if (PlayerPrefs.HasKey("ToggleSprint"))
             sprintToggle.isOn = PlayerPrefs.GetInt("ToggleSprint") == 1;
 
-        playerControls.SetSensitivity(newSensitivity);
+        //playerControls.SetSensitivity(newSensitivity);
 		volumeSlider.value = AudioListener.volume;
 		sensitivitySlider.value = newSensitivity * 10f;
 
@@ -74,7 +74,7 @@ public class PauseMenu : MonoBehaviour
 
 	public void OnDeactivate()
 	{
-		playerControls.SetSensitivity(newSensitivity);
+		//playerControls.SetSensitivity(newSensitivity);
 		Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;
 		isPaused = false;

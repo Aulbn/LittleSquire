@@ -5,11 +5,10 @@ using UnityEngine;
 public class AnimationHandler : MonoBehaviour
 {
     public static AnimationHandler Instance;
-    private CharacterMovement movement;
-    private Animator anim;
-
-    public Transform spineJoint;
-    public float spineMaxRotation = 90;
+    //private CharacterMovement movement;
+    public Animator anim { get; private set; }
+    //public Transform spineJoint;
+    //public float spineMaxRotation = 90;
 
     private float currentSpeed;
     private bool hasStepped = false;
@@ -21,7 +20,7 @@ public class AnimationHandler : MonoBehaviour
     {
         if (Instance == null) Instance = this;
         anim = GetComponent<Animator>();
-        movement = GetComponentInParent<CharacterMovement>();
+        //movement = GetComponentInParent<CharacterMovement>();
     }
 
     private void Start()
@@ -34,12 +33,17 @@ public class AnimationHandler : MonoBehaviour
     {
         FootStepUpdate();
 
-        currentSpeed = movement.CurrentSpeed <= movement.WalkSpeed ?
-            (movement.CurrentSpeed / movement.WalkSpeed) / 2 :
-            (movement.CurrentSpeed / movement.SprintSpeed);
+        //currentSpeed = movement.CurrentSpeed <= movement.WalkSpeed ?
+        //    (movement.CurrentSpeed / movement.WalkSpeed) / 2 :
+        //    (movement.CurrentSpeed / movement.SprintSpeed);
 
-        anim.SetFloat("Velocity", currentSpeed);
-        anim.SetBool("IsGrounded", movement.IsOnGround);
+        //anim.SetFloat("Velocity", currentSpeed);
+        //anim.SetBool("IsGrounded", movement.IsOnGround);
+    }
+
+    public void SetLocomotion(float velocity, float walkSpeed, float runSpeed)
+    {
+        anim.SetFloat("Velocity", velocity / walkSpeed);
     }
 
     private void FootStepUpdate()

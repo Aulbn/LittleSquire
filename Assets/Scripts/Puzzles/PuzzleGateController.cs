@@ -116,8 +116,8 @@ public class PuzzleGateController : MonoBehaviour
         if (counter == 2)
         {
             OpenGate();
-            AI.AISystem ai = FindObjectOfType<AI.AISystem>();
-            ai.SetState(new AI.FollowState(ai));
+            //AI.AISystem ai = FindObjectOfType<AI.AISystem>();
+    
         }
     }
 
