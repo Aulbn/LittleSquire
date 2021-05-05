@@ -15,6 +15,8 @@ public class PlayerController : Controller
 
     private new void Awake()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         Controls = new PlayerControls();
         cc = GetComponent<CharacterController>();
         if (!mainCamera) mainCamera = FindObjectOfType<Camera>();
